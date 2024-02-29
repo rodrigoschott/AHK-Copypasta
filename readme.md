@@ -1,37 +1,52 @@
-#Create content for readme.md for a program that runs locally on windows 11 and when active, when using the shortcut "shift + v", #recovers the last entry of the clipboard and writes its content manually simulating keyboard clicks in its integrity, including #spaces, new lines and everything else. Include links, sources and detailed explanations.
-
 # Clipboard Recovery Program
 
-This is a program designed to run locally on Windows 11. When active, it allows the user to recover the last entry of the clipboard and writes its content manually, simulating keyboard clicks in its entirety, including spaces, new lines, and everything else. This is achieved by using the shortcut "Shift + V".
+The Clipboard Recovery Program is a utility designed to run on Windows, allowing users to recover and automatically "type out" the last entry of their clipboard by simulating keyboard clicks. This tool is particularly useful for quickly pasting clipboard content into applications that do not support traditional paste operations.
+
+## Features
+
+- **Clipboard Monitoring**: Continuously monitors the clipboard for new content.
+- **Keyboard Simulation**: Types out the clipboard's content as if entered manually via the keyboard, including spaces, new lines, etc.
+- **Custom Hotkey Activation**: Utilizes the "Insert" key as a trigger for pasting the clipboard content.
 
 ## Installation
 
-1. Download the program from the [releases page](https://github.com/your-username/your-repo/releases).
-2. Unzip the downloaded file.
-3. Run the installer.
+To use the Clipboard Recovery Program, follow these steps:
+
+1. Download the latest version of the program from the [releases page](https://github.com/your-username/your-repo/releases).
+2. Unzip the downloaded file to a convenient location on your computer.
+3. Run the installer and follow the on-screen instructions.
 
 ## Usage
 
-1. Start the program.
-2. Copy any text or data.
-3. Press "Shift + V" to recover the last entry of the clipboard and write its content.
+1. Start the Clipboard Recovery Program.
+2. Copy any text or data you wish to "type out" into an application.
+3. Press the "Insert" key. The program will simulate typing the content of the clipboard into the currently focused application.
 
 ## How It Works
 
+The program uses the following Python libraries:
 
-## Sources
+- [`pyperclip`](https://pypi.org/project/pyperclip/): For accessing the system clipboard.
+- [`pynput`](https://pypi.org/project/pynput/): To monitor keyboard inputs and simulate keyboard typing.
 
-This program uses the following libraries:
+When active, the program listens for the "Insert" key press. Upon detection, it fetches the current content of the clipboard and simulates typing this content, character by character, into the currently active application.
 
-- [pyperclip](https://pypi.org/project/pyperclip/): A cross-platform Python module for copy and paste clipboard functions.
-- [pynput](https://pypi.org/project/pynput/): This library allows you to control and monitor input devices.
+## Development
 
-## License
+To set up a development environment for the Clipboard Recovery Program, you will need Python installed on your system. It is recommended to use a virtual environment:
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+```
+Install the required dependencies:
+```bash
+pip install pyperclip pynput
+```
 
-## Acknowledgments
+You can then clone the repository and make your modifications:
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+```bash
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+```
