@@ -18,7 +18,6 @@ This is a program designed to run locally on Windows 11. When active, it allows 
 
 ## How It Works
 
-The program uses the Windows API to listen for the "Shift + V" shortcut. When this shortcut is detected, the program retrieves the last entry from the clipboard and simulates keyboard clicks to write the content.
 
 ## Sources
 
