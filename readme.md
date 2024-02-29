@@ -50,3 +50,12 @@ You can then clone the repository and make your modifications:
 git clone https://github.com/your-username/your-repo.git
 cd your-repo
 ```
+
+Contributing
+Contributions to the Clipboard Recovery Program are welcome! Please refer to the contributing guidelines for more information.
+
+License
+This project is licensed under the MIT License.
+
+Acknowledgments
+Thanks to the developers of pyperclip and pynput for providing the essential libraries used in this project.
